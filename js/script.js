@@ -1,17 +1,17 @@
 var questions = [
   {
     question: "How many colours of Cavalier are there?",
-    answer: "4: Blenheim, black and tan, tri-colour and ruby",
+    answer: "4",
   },
 
   {
     question: "Which country does the Cavalier originate?",
-    answer: "England",
+    answer: "ENGLAND",
   },
 
   {
     question: "Which U.S. president had a pet Cavalier?",
-    answer: "Ronald Reagan",
+    answer: "RONALD REAGAN",
   }
 ];
 
@@ -21,8 +21,12 @@ for (var i = 0; i < questions.length; i++) {
   question = questions[i].question;
   answer = questions[i].answer;
   response = prompt(question);
-  if (response === answer){
-    correctAnswers += 1;
+  if (response.toUpperCase() === answer){
+    alert("Correct! ");
+    correctAnswers ++;
+  }
+  else {
+    alert("Incorrect. The answer was " + questions[i].answer);
   }
 }
 
